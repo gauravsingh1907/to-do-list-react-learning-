@@ -80,7 +80,8 @@
     return (
       <>
         <Navbar />
-        <div className="max-w-2xl mx-3 md:mx-auto md:px-6 px-3 py-5 rounded-xl bg-violet-100 min-h-[80vh]">
+ <div className="max-w-2xl mx-3 md:mx-auto md:px-6 px-3 py-5 mt-6 rounded-xl bg-violet-100 min-h-[80vh]">
+
 
 
         <h1 className='font-bold text-violet-700 text-center text-xl'>Day Tracker - Change Your Life Goals</h1>

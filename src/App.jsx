@@ -1,5 +1,5 @@
   import { useEffect, useState } from 'react'
-  import Navbar from './components/navbar'
+  import Navbar from './components/Navbar'
   import { v4 as uuidv4 } from 'uuid';
   import { MdEdit } from "react-icons/md";
   import { MdDeleteOutline } from "react-icons/md";

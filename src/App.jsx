@@ -58,6 +58,12 @@
     const handlechange = (e) => {
       settodo(e.target.value)
     }
+    const handlekeydown = (e) => {
+      if (e.key === "Enter" && todo.length > 3) {
+        e.preventDefault();
+        handleadd();
+      }
+    }
   const handledelete = (id) => {
     const ok = window.confirm("Are you sure you want to delete this todo?");
     if (!ok) return;
@@ -88,7 +94,7 @@
           <div className="addtodo my-6 flex flex-col gap-3">
             <h2 className='text-lg font-bold text-purple-700 text-shadow-2xs shadow-fuchsia-900'>Add Todos</h2>
 
-            <input onChange={handlechange} value={todo} className='textbox bg-white w-full rounded-full px-5 py-1 ' type="text" placeholder='Add Your Todo Here ' />
+            <input onChange={handlechange} onKeyDown={handlekeydown} value={todo} className='textbox bg-white w-full rounded-full px-5 py-1 ' type="text" placeholder='Add Your Todo Here ' />
             <button onClick={handleadd} disabled={todo.length<=3}  className='bg-violet-800 hover:bg-violet-950 disabled:bg-indigo-900 text-sm px-3 py-1 rounded-md  font-bold text-white cursor-pointer'>{editId ? "Save" : "Add"}</button>
 
           </div>
